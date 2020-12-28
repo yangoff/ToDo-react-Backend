@@ -1,4 +1,6 @@
 const express = require('express');
+const Port = 3333;
+
 const cors = require('cors');
 const server = express();
 
@@ -9,11 +11,10 @@ server.use(express.json());
 const TaskRoutes = require('./routes/TaskRouts');
 
 
-
 server.use('/task',TaskRoutes);
 
 server.listen(3333, ()=>{
-    
+    console.log(`Listen in ${Port}`);
     figlet('API ONLINE',{font:'kban'}, function(err, data) {
         if (err) {
             console.log('Something went wrong...');

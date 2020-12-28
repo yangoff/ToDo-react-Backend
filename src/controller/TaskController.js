@@ -82,6 +82,7 @@ class TaskController{
     async late(req,res){
         await TaskModel.find({
             'when': {'$lt': current},
+            'done': 'false',
             'macaddress': {'$in': req.params.macaddress}
         })
             .sort('when')
