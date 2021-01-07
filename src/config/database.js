@@ -7,7 +7,7 @@ const source = 'admin'
 
 // mongoose.connect(url, { useNewUrlParser: true,authSource:source,user:usr,pass:pass});
 
-mongoose.connect(url, {authSource:source,user:usr,pass:pass,useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(url, {user:usr,pass:pass,useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => console.log('MongoDB Connected...'))
     .catch((err) => console.log(err))
 module.exports = mongoose;
