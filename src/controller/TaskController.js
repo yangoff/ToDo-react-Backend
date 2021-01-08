@@ -153,6 +153,11 @@ class TaskController{
                 return res.status(500).json(error);
             });
     }
+
+    async test(req,res){
+        console.log('Completo!')
+        return res.status(200);
+    }
 }
 
 module.exports = new TaskController();
