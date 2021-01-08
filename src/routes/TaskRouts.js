@@ -16,7 +16,7 @@ router.get('/filter/today/:macaddress',TaskController.today);
 router.get('/filter/week/:macaddress',TaskController.week);
 router.get('/filter/month/:macaddress',TaskController.month);
 router.get('/filter/year/:macaddress',TaskController.year);
-router.get('/test',TaskController.test);
+
 
 
 module.exports = router;

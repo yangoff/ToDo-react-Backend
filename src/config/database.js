@@ -7,8 +7,6 @@ const pass = 'todoadmintestdb'
 const db = 'todoappdb'
 
 
-// mongoose.connect(url, { useNewUrlParser: true,authSource:source,user:usr,pass:pass});
-
 mongoose.connect(url, {
     authSource:source,
     user:usr,
@@ -20,11 +18,5 @@ mongoose.connect(url, {
 })
     .then(() => console.log('MongoDB Connected...'))
     .catch((err) => console.log(err))    
-
-// mongoose.connect('')
-//     .then(() => console.log('MongoDB Connected...'))
-//      .catch((err) => console.log(err))
-
-
 
     module.exports = mongoose;

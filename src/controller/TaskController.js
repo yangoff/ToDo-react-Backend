@@ -29,7 +29,7 @@ class TaskController{
     }
 
     async all(req,res){
-
+        
         await TaskModel.find({ macaddress: {'$in': req.params.macaddress}})
             .sort('when')
             .then(response=>{
@@ -154,15 +154,6 @@ class TaskController{
             });
     }
 
-    async test(req,res){
-        
-            response = {
-                Hey : 'Brother'
-            }
-            return res.status(200).json(response);
-        
-        
-    }
 }
 
 module.exports = new TaskController();
