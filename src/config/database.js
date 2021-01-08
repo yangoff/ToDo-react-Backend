@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 // const url = 'mongodb://localhost:27017/todo'
-const url = 'mongo_todoappdb:27017'
+const url = 'mongodb://mongo_todoappdb:27017'
 const source = 'todoappdb'
 const usr = 'todoadmin'
 const pass = 'todoadmintestdb'
@@ -18,9 +18,12 @@ mongoose.connect(url, {
     useUnifiedTopology: true
     
 })
-    
     .then(() => console.log('MongoDB Connected...'))
-    .catch((err) => console.log(err))
+    .catch((err) => console.log(err))    
+
+// mongoose.connect('')
+//     .then(() => console.log('MongoDB Connected...'))
+//      .catch((err) => console.log(err))
 
 
 
