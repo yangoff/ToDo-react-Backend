@@ -156,7 +156,12 @@ class TaskController{
 
     async test(req,res){
         console.log('Completo!')
-        return res.status(200);
+        .then(response=>{
+            return res.status(200).json(response);
+        })
+        .catch(error=>{
+            return res.status(500).json(error);
+        });
     }
 }
 
